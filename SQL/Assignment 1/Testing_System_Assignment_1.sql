@@ -2,19 +2,19 @@ CREATE DATABASE Testing_System_Assignment_1;
 USE Testing_System_Assignment_1;
 
 CREATE TABLE Department(
-	department_id		INT,
-	department_name		VARCHAR(20)
+department_id		INT,
+department_name		VARCHAR(20)
 );
 CREATE TABLE Position (
 position_id		INT,
-poaition_name	VARCHAR(20)
+poaition_name		VARCHAR(20)
 );
 CREATE TABLE Account(
 account_id		INT,
 email			VARCHAR(50),
-username		VARCHAR(50),
-fullname		VARCHAR(50),
-department_id	INT,
+username		VARCHAR(20),
+fullname		VARCHAR(20),
+department_id		INT,
 position_id		INT,
 create_date		DATE
 );
@@ -27,7 +27,7 @@ CREATE TABLE Group_use(
 group_id 		INT,
 group_name 		VARCHAR(20),
 creator_id 		INT,
-creator_date 	DATE
+creator_date 		DATE
 );
 CREATE TABLE TypeQuestion(
 type_id			INT,
@@ -35,7 +35,7 @@ type_name		VARCHAR(20)
 );
 CREATE TABLE CategoryQuestion(
 category_id		INT,
-category_name	VARCHAR(20)
+category_name		VARCHAR(20)
 );
 CREATE TABLE Question(
 question_id		INT,
