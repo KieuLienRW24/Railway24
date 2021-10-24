@@ -8,17 +8,17 @@ CREATE TABLE Department(
 	department_name		VARCHAR(50) NOT NULL
 );
 
-INSERT INTO Department(department_id,department_name)
-VALUE					(1			,'Phòng Hàng chính'),
-						(2			,'Phòng Nhân sự'),
-						(3			,'Phòng Kế toán'),
-						(4			,'Phòng Marketting'),
-						(5			,'Phòng Thiết kế'),
-						(6			,'Phòng Sale'),
-                        (7			,'Phòng Xuất nhập khẩu'),
-                        (8			,'Phòng Kế hoạch'),
-                        (9			,'Phòng Dự án đầu tư'),
-                        (10			,'Phòng Giao nhận');
+INSERT INTO Department(department_id	,department_name)
+VALUE		(1			,'Phòng Hàng chính'),
+		(2			,'Phòng Nhân sự'),
+		(3			,'Phòng Kế toán'),
+		(4			,'Phòng Marketting'),
+		(5			,'Phòng Thiết kế'),
+		(6			,'Phòng Sale'),
+                (7			,'Phòng Xuất nhập khẩu'),
+                (8			,'Phòng Kế hoạch'),
+                (9			,'Phòng Dự án đầu tư'),
+                (10			,'Phòng Giao nhận');
 SELECT *
 FROM Department;
 
@@ -28,16 +28,16 @@ position_id		TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 position_name	ENUM('Dev','Test','Serum Master','PM')
 );
 INSERT INTO Position (position_id	, position_name)
-VALUE						(1		,'Dev'),
-							(2		,'Test'),
-							(3		,'Serum Master'),
-							(4		,'PM'),
-                            (5		,'Serum Master'),
-                            (6		,'Test'),
-                            (7		,'Test'),
-                            (8		,'Dev'),
-                            (9		,'PM'),
-							(10		,'Serum Master');
+VALUE			(1		,'Dev'),
+			(2		,'Test'),
+			(3		,'Serum Master'),
+			(4		,'PM'),
+                        (5		,'Serum Master'),
+                        (6		,'Test'),
+                        (7		,'Test'),
+                        (8		,'Dev'),
+                        (9		,'PM'),
+			(10		,'Serum Master');
 SELECT *
 FROM Position ;
 
@@ -55,16 +55,16 @@ FOREIGN KEY (position_id) REFERENCES Position (position_id)
 );
 
 INSERT INTO Account(account_id	, email						, username		, fullname		, department_id	, position_id	)
-VALUE						(1	,'nguyenvana@gmail.com'		, 'anguyen'		, 'nguyen van a'	, 1				, 1				), 
-							(2	,'nguyenvanb@gmail.com'		, 'bnguyen'		, 'nguyen van b'	, 2				, 2				),
-							(3	,'nguyenvanhuynh@gmail.com'	, 'quynhnguyen'	, 'nguyen van quynh', 3				, 3				),
-                            (4	,'nguyenvandao@gmail.com'	, 'daunguoen'	, 'nguyen van dao'	, 4				, 4				),
-							(5	,'nguyenvane@gmail.com'		, 'enguyen'		, 'nguyen van e'	, 5				, 5				),
-							(6	,'nguyenvanf@gmail.com'		, 'fnguyen'		, 'nguyen van f'	, 6				, 6				),
-                            (7	,'nguyenvang@gmail.com'		, 'gnguyen'		, 'nguyen van g'	, 7				, 7				),
-                            (8	,'nguyenvanh@gmail.com'		, 'hnguyen'		, 'nguyen van h'	, 8				, 8				),
-                            (9	,'nguyenvanvo@gmail.com'	, 'vonguyen'	, 'nguyen van vo'	, 9				, 9				),
-                            (10	,'nguyenvanhuynh@gmail.com'	, 'huynhnguyen'	, 'nguyen van huynh', 10			, 10			);
+VALUE			(1	,'nguyenvana@gmail.com'		, 'anguyen'	, 'nguyen van a'	, 1				, 1				), 
+			(2	,'nguyenvanb@gmail.com'		, 'bnguyen'	'nguyen van b'		, 2				, 2				),
+			(3	,'nguyenvanhuynh@gmail.com'	, 'quynhnguyen'	, 'nguyen van quynh'	, 3				, 3				),
+                        (4	,'nguyenvandao@gmail.com'	, 'daunguoen'	, 'nguyen van dao'	, 4				, 4				),
+			(5	,'nguyenvane@gmail.com'		, 'enguyen'	, 'nguyen van e'	, 5				, 5				),
+			(6	,'nguyenvanf@gmail.com'		, 'fnguyen'	, 'nguyen van f'	, 6				, 6				),
+                        (7	,'nguyenvang@gmail.com'		, 'gnguyen'	, 'nguyen van g'	, 7				, 7				),
+                        (8	,'nguyenvanh@gmail.com'		, 'hnguyen'	, 'nguyen van h'	, 8				, 8				),
+                        (9	,'nguyenvanvo@gmail.com'	, 'vonguyen'	, 'nguyen van vo'	, 9				, 9				),
+                        (10	,'nguyenvanhuynh@gmail.com'	, 'huynhnguyen'	, 'nguyen van huynh'	, 10				, 10				);
 SELECT *		
 FROM Account;
 
@@ -76,16 +76,16 @@ creator_id 		TINYINT UNSIGNED,
 creator_date 	DATETIME DEFAULT NOW()
 );
 INSERT INTO Group_user	(group_id	,group_name	,creator_id	, creator_date)
-VALUE					(1			,'G-1'		,1			,'2019/12/10'),
-						(2			,'G-2'		,2			,'2019/12/11'),
-						(3			,'G-3'		,3			,'2019/12/13'),
-						(4			,'G-4'		,4			,'2019/12/14'),
-						(5			,'G-5'		,5			,'2019/12/15'),
-                        (6			,'G-6'		,6			,'2019/12/16'),
-                        (7			,'G-7'		,7			,'2019/12/17'),
-                        (8			,'G-8'		,8			,'2019/12/18'),
-                        (9			,'G-9'		,9			,'2019/12/18'),
-                        (10			,'G-10'		,10			,'2019/12/20');
+VALUE			(1		,'G-1'		,1			,'2019/12/10'),
+			(2		,'G-2'		,2			,'2019/12/11'),
+			(3		,'G-3'		,3			,'2019/12/13'),
+			(4		,'G-4'		,4			,'2019/12/14'),
+			(5		,'G-5'		,5			,'2019/12/15'),
+                        (6		,'G-6'		,6			,'2019/12/16'),
+                       	(7		,'G-7'		,7			,'2019/12/17'),
+                        (8		,'G-8'		,8			,'2019/12/18'),
+                        (9		,'G-9'		,9			,'2019/12/18'),
+                        (10		,'G-10'		,10			,'2019/12/20');
 SELECT *
 FROM Group_user;
 
@@ -98,16 +98,16 @@ FOREIGN KEY(group_id) REFERENCES Group_user (group_id),
 FOREIGN KEY(account_id) REFERENCES Account (account_id)
 );
 INSERT INTO GroupAccount	(group_id	,account_id	)
-VALUE						(1			,1			),
-							(2			,2			),
-							(3			,3			),
-							(4			,4			),
-                            (5			,5			),
-                            (6			,6			),
-                            (7			,7			),
-                            (8			,8			),
-                            (9			,9			),
-                            (10			,10			);
+VALUE				(1		,1		),
+				(2		,2		),
+				(3		,3		),
+				(4		,4		),
+                           	(5		,5		),
+                            	(6		,6		),
+                            	(7		,7		),
+                            	(8		,8		),
+                            	(9		,9		),
+                            	(10		,10		);
                             
 
 SELECT *
@@ -118,17 +118,17 @@ CREATE TABLE TypeQuestion(
 type_id			TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 type_name		ENUM('Essay', 'Multiple-Choice')
 );
-INSERT INTO TypeQuestion(type_id,type_name)
-VALUE					(1		,'Essay'),
-						(2		,'Multiple-Choice'),
-                        (3		,'Multiple-Choice'),
-                        (4		,'Essay'),
-                        (5		,'Multiple-Choice'),
-                        (6		,'Essay'),
-                        (7		,'Essay'),
-                        (8		,'Multiple-Choice'),
-                        (9		,'Essay'),
-                        (10		,'Multiple-Choice');
+INSERT INTO TypeQuestion(type_id	,type_name		)
+VALUE			(1		,'Essay'		),
+			(2		,'Multiple-Choice'	),
+                        (3		,'Multiple-Choice'	),
+                        (4		,'Essay'		),
+                        (5		,'Multiple-Choice'	),
+                        (6		,'Essay'		),
+                        (7		,'Essay'		),
+                        (8		,'Multiple-Choice'	),
+                        (9		,'Essay'		),
+                        (10		,'Multiple-Choice'	);
                         
 SELECT *
 FROM TypeQuestion; 
@@ -138,17 +138,17 @@ CREATE TABLE CategoryQuestion(
 category_id		TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 category_name	VARCHAR(50) NOT NULL
 );
-INSERT INTO CategoryQuestion(category_id,category_name)
-VALUE						(1			,'Java'),
-							(2			,'.NET'),
-                            (3			,'SQL'),
-                            (4			,'Postman'),
-                            (5			,'Ruby'),
-                            (6			,'Java'),
-                            (7			,'SQL'),
-                            (8			,'.NET'),
-                            (9			,'Postman'),
-                            (10			,'Java');
+INSERT INTO CategoryQuestion(category_id,category_name	)
+VALUE				(1	,'Java'		),
+				(2	,'.NET'		),
+                            	(3	,'SQL'		),
+                            	(4	,'Postman'	),
+                            	(5	,'Ruby'		),
+                            	(6	,'Java'		),
+                           	(7	,'SQL'		),
+                            	(8	,'.NET'		),
+                            	(9	,'Postman'	),
+                            	(10	,'Java'		);
                             
 SELECT *
 FROM CategoryQuestion; 
@@ -164,17 +164,17 @@ FOREIGN KEY(category_id) REFERENCES CategoryQuestion (category_id),
 FOREIGN KEY(type_id) REFERENCES TypeQuestion (type_id)
 );
 
-INSERT INTO Question(question_id	,content	,category_id,type_id)
-VALUE				(1				,'1+1=2?'	,1			,1		),
-					(2				,'1+2=3?'	,2			,2		),
-                    (3				,'1+3=4?'	,3			,3		),
-                    (4				,'1+4=5?'	,4			,4		),
-                    (5				,'1+5=0?'	,5			,5		),
-                    (6				,'1+6=7?'	,6			,6		),
-                    (7				,'1+7=8?'	,7			,7		),
-                    (8				,'1+8=9?'	,8			,8		),
-                    (9				,'1+9=0?'	,9			,9		),
-                    (10				,'1+10=0?'	,10			,10		);
+INSERT INTO Question(question_id	,content	,category_id		,type_id)
+VALUE			(1		,'1+1=2?'	,1			,1		),
+			(2		,'1+2=3?'	,2			,2		),
+                    	(3		,'1+3=4?'	,3			,3		),
+                    	(4		,'1+4=5?'	,4			,4		),
+                   	(5		,'1+5=0?'	,5			,5		),
+                    	(6		,'1+6=7?'	,6			,6		),
+                    	(7		,'1+7=8?'	,7			,7		),
+                   	(8		,'1+8=9?'	,8			,8		),
+                    	(9		,'1+9=0?'	,9			,9		),
+                    	(10		,'1+10=0?'	,10			,10		);
                     
 SELECT *
 FROM Question;               
@@ -187,17 +187,17 @@ question_id		TINYINT UNSIGNED,
 iscorrect		ENUM('ĐÚNG', 'SAI'),
 FOREIGN KEY(question_id) REFERENCES Question (question_id)
 );
-INSERT INTO Answer	(answer_id	,content	,question_id	,iscorrect)
-VALUE				(1			,'1+1=2?'	,1				,'ĐÚNG'),
-					(2			,'1+2=3?'	,2				,'ĐÚNG'),
-                    (3			,'1+3=4?'	,1				,'ĐÚNG'),
-                    (4			,'1+4=5?'	,4				,'ĐÚNG'),
-                    (5			,'1+5=0?'	,5				,'SAI'),
-                    (6			,'1+6=7?'	,6				,'ĐÚNG'),
-                    (7			,'1+7=8?'	,1				,'ĐÚNG'),
-                    (8			,'1+8=9?'	,8				,'ĐÚNG'),
-                    (9			,'1+9=0?'	,9				,'SAI'),
-                    (10			,'1+10=0?'	,1				,'SAI');
+INSERT INTO Answer	(answer_id	,content	,question_id	,iscorrect	)
+VALUE				(1	,'1+1=2?'	,1		,'ĐÚNG'		),
+				(2	,'1+2=3?'	,2		,'ĐÚNG'		),
+                    		(3	,'1+3=4?'	,1		,'ĐÚNG'		),
+                    		(4	,'1+4=5?'	,4		,'ĐÚNG'		),
+                    		(5	,'1+5=0?'	,5		,'SAI'		),
+                    		(6	,'1+6=7?'	,6		,'ĐÚNG'		),
+                    		(7	,'1+7=8?'	,1		,'ĐÚNG'		),
+                    		(8	,'1+8=9?'	,8		,'ĐÚNG'		),
+                    		(9	,'1+9=0?'	,9		,'SAI'		),
+                   		(10	,'1+10=0?'	,1		,'SAI'		);
 SELECT *
 FROM Answer;               
                   
@@ -213,17 +213,17 @@ create_date		DATETIME DEFAULT NOW(),
 FOREIGN KEY(category_id) REFERENCES CategoryQuestion (category_id)
 );
 
-INSERT INTO Exam(exam_id,code	,title	,category_id, duration	,creator_id	, create_date)
-VALUE			(1		,'A11'	,'Toán'	,1			,120		,1			,'2019/12/10'),
-				(2		,'A12'	,'Lý'	,2			,90	 		,2			,'2019/12/11'),
-				(3		,'A13'	,'Hóa'	,3			,90			,3			,'2019/12/12'),
-				(4		,'A14'	,'Sinh'	,4			,60			,4			,'2019/12/13'),
-				(5		,'A15'	,'Sử'	,5			,45			,5			,'2019/12/14'),
-                (6		,'A16'	,'Địa'	,6			,60			,4			,'2019/12/15'),
-                (7		,'A17'	,'Văn'	,7			,60			,4			,'2019/12/16'),
-                (8		,'A18'	,'KT'	,8			,60			,4			,'2019/12/17'),
-                (9		,'A19'	,'MT'	,9			,60			,4			,'2019/12/18'),
-                (10		,'A10'	,'AV'	,10			,60			,4			,'2019/12/19');
+INSERT INTO Exam(exam_id,code	,title	,category_id	, duration	,creator_id	, create_date)
+VALUE		(1	,'A11'	,'Toán'	,1		,120		,1			,'2019/12/10'),
+		(2	,'A12'	,'Lý'	,2		,90	 	,2			,'2019/12/11'),
+		(3	,'A13'	,'Hóa'	,3		,90		,3			,'2019/12/12'),
+		(4	,'A14'	,'Sinh'	,4		,60		,4			,'2019/12/13'),
+		(5	,'A15'	,'Sử'	,5		,45		,5			,'2019/12/14'),
+                (6	,'A16'	,'Địa'	,6		,60		,4			,'2019/12/15'),
+                (7	,'A17'	,'Văn'	,7		,60		,4			,'2019/12/16'),
+                (8	,'A18'	,'KT'	,8		,60		,4			,'2019/12/17'),
+                (9	,'A19'	,'MT'	,9		,60		,4			,'2019/12/18'),
+                (10	,'A10'	,'AV'	,10		,60		,4			,'2019/12/19');
 SELECT *
 FROM Exam;
 
@@ -234,16 +234,16 @@ question_id		TINYINT UNSIGNED,
  PRIMARY KEY(exam_id,question_id)
 );
 INSERT INTO Examquestion	(exam_id	,question_id)
-VALUE						(1			,1			),
-							(2			,2			),
-                            (3			,3			),
-                            (4			,4			),
-                            (5			,5			),
-                            (6			,6			),
-                            (7			,7			),
-                            (8			,8			),
-                            (9			,9			),
-                            (10			,10			);
+VALUE				(1		,1			),
+				(2		,2			),
+                            	(3		,3			),
+                            	(4		,4			),
+                            	(5		,5			),
+                           	(6		,6			),
+                            	(7		,7			),
+                            	(8		,8			),
+                            	(9		,9			),
+                           	(10		,10			);
 				
 SELECT *
 FROM Examquestion;
